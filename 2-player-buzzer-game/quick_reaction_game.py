@@ -7,7 +7,7 @@ io_button2 = 15
 io_led = 4
 
 
-class player:
+class Player:
 	
 	def __init__(self, name, io_port):
 		self.playername = name
@@ -20,7 +20,7 @@ class player:
 		return self.button_ID
 
 
-class board:
+class Board:
 
 	def __init__(self, button1, button2):
 
@@ -50,9 +50,9 @@ class board:
 
 def main():
 	
-	player1 = player(("Enter player 1 name "), io_button1)
-	player2 = player(("Enter player 2 name "), io_button2)
-	b = board(io_button1, io_button2)
+	player1 = Player(input("Enter Player 1 Name Here: "), io_button1)
+	player2 = Player(input("Enter Player 2 Name Here: "), io_button2)
+	b = Board(io_button1, io_button2)
 	b.start(player1, player2)
 
 
